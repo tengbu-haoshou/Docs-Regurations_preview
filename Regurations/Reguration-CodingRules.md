@@ -15,9 +15,9 @@
 * ハンガリー記法（bFlag、iValue 等）は、使用しない。
 * アッパーキャメルケース、キャメルケース、スネークケースについて：
     ```
-    WriteFile ← アッパーキャメルケース
-    writeFile ← キャメルケース
-    write_file ← スネークケース
+    WriteFile() ← アッパーキャメルケース
+    writeFile() ← キャメルケース
+    write_file() ← スネークケース
     ```
 * 関数名やメソッド名は、基本的に “[助動詞 ＋] 動詞 + 名詞” とする。
     |<center>キャメルケース</center>|<center>スネークケース</center>|<center>復帰値例<center>|<center>補足<center>|
@@ -42,10 +42,9 @@ Eclipse のプラグイン “Checkstyle” のチェックに合格すること
 * クラスメソッド名、変数名は、キャメルケースとする。
 * 定数名は、大文字とアンダースコアとする。
 * 段下げは、タブを使用し、空白 4文字分とする。
-* 共通変数名は、“ConstUtil.java” に定義する。
+* 共通変数名は、“ConstUtil.java” といった共通クラスで定義する。
 * 起動時の可変値（例えば、ポート番号）は、ファイル “application.properties” に定義し、“PropertyUtil.java” を通じて値を取り出す。
 * return は省略不可とする。
-* for、while、do-while、if、else、switch、try、catch の “{” と “}” は、省略不可とする。
 * 全体的な書き方（例えば、空白の空け方、“} else {” の書き方）：
     ```
     /**
@@ -86,11 +85,15 @@ Eclipse のプラグイン “Checkstyle” のチェックに合格すること
         }
     }
     ```
-    クラスメソッド、for、while、do-while、if、else、switch、catch の “(”の前に空白を空け、“(”の後ろには空白を空けない。また、“)”の前には空白を空けない。<br>
-    クラスメソッド、for、while、do-while、if、else、switch、try、catch の “{”の前に空白を空ける。<br>
+    for、while、do-while、if、else、switch、try、catch の “{” と “}” は、省略不可とする。<br>
+    クラスメソッド、if、else、for、while、do-while、switch、catch の “(”の前に空白を空け、“(”の後ろには空白を空けない。また、“)”の前には空白を空けない。<br>
+    クラスメソッド、if、else、switch、for、while、do-while、try、catch の “{”の前に空白を空ける。<br>
+    case の最後の行に break を入れるか否かは、よく考えること。<br>
     代入演算子、算術演算子、比較演算子の前後には空白を空ける。<br>
     単項算術演算子（“++” 等）は、空白を空けない。<br>
-    コンマ“,”の後ろに空白を空ける<br>
+    コンマ“,”の後ろに空白を空ける。<br>
+    for のセミコロン “;” の前には空白を空けず、後ろには空白を空ける。<br>
+    文末のセミコロン “;” の前には空白を空けない。<br>
 
 ## 3. Python 
 
@@ -143,11 +146,11 @@ PEP（Python Enhancement Proposal）に準拠することが望ましい。PyCha
     if __name__ == '__main__':
         main()
     ```
-    “:” の前に空白を空けない。<br>
+    if、elif、else、match、for、while、match、case、try、except の “:” の前に空白を空けない。<br>
     代入演算子、算術演算子、比較演算子の前後には空白を空ける。<br>
-    関数やクラスの引数は、アノテーション “: ” を使用して型を明確にする。<br>
-    関数やクラスには、アノテーション “ -> ” を使用して型を明確にする。<br>
-    コンマ“,”の後ろに空白を空ける<br>
+    関数やクラスの引数は、アノテーション “:” を使用して引数型を明確にする。“:” の後方に空白を空ける<br>
+    関数やクラスには、アノテーション “->” を使用して戻り型を明確にする。“->” の前後に空白を空ける。<br>
+    コンマ “,” の後ろに空白を空ける。<br>
     関数やクラスの前後には、2つの改行を空ける。<br>
 
 ## 4. HTML（HTML テンプレートを含む）
