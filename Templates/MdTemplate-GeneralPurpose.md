@@ -62,7 +62,7 @@ D:\Developments> exit
 
 **商品一覧**
 
-<center>No</center>|<center>商品</center>|<center>価格 [CNY]</center>|<center>数量 [個]</center>|
+|<center>No</center>|<center>商品</center>|<center>価格 [CNY]</center>|<center>数量 [個]</center>|
 |--:|:-:|--:|--:|
 |1|Apple|10,000.00|100|
 |2|Orange|2,000.00|2,000|
