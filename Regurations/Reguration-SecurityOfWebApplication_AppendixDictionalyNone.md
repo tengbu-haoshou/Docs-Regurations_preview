@@ -1,9 +1,11 @@
 # アプリケーションセキュリティ辞書（内容無し）
 
-“Reguration-SecurityOfWebApplication_AppendixDictionaly.md” は、CC0-1.0 の対象外である。引用元の Copyright に従い、非営利の使用（内部の教育目的）であることが確認でできれば公開する。<br>
+“Reguration-SecurityOfWebApplication_AppendixDictionaly.md” は、CC0-1.0 の対象外である。<br>
+引用元の Copyright に従い、非営利の使用（内部の教育目的の程度）であることが確認できれば、“Reguration-SecurityOfWebApplication_AppendixDictionaly.md” を個別に公開する。<br>
 
 ## 目次
 
+* 引用元の説明
 * クロスサイトスクリプティング（XSS）
 * フォージェリ（偽装）
   * クロスサイトリクエストフォージェリ（CSRF）
@@ -26,6 +28,12 @@
   * クリックジャッキング
   * ブルートフォースアタック
   * クロスサイトトレーシング（XST）
+
+## 引用元の説明
+
+とほほのWWW入門<br>
+出典：セキュリティ <https://www.tohoho-web.com/ex/security.html><br>
+引用ルール：条件を守れば文章も再配布可能です <https://www.tohoho-web.com/wwwintro.htm#redistribution><br>
 
 ## クロスサイトスクリプティング（XSS）
 
