@@ -7,6 +7,7 @@
 3\. Python<br>
 4\. HTML（HTML テンプレートを含む）<br>
 5\. SQL<br>
+6\. TODO
 
 ## 1. 言語共通
 
@@ -37,14 +38,13 @@
 Eclipse のプラグイン “Checkstyle” のチェックに合格することが望ましい。<br>
 
 * 80文字から120文字で、改行を入れるよう工夫する。
-* パッケージ名は小文字とする。
+* パッケージ名のプレフィックス（フォルダー名からなる）は、小文字とする。
 * クラス名、ファイル名は、アッパーキャメルケースとする。
 * クラスメソッド名、変数名は、キャメルケースとする。
 * 定数名は、大文字とアンダースコアとする。
 * 段下げは、タブを使用し、空白 4文字分とする。
 * 共通変数名は、“ConstUtil.java” といった共通クラスで定義する。
-* 起動時の可変値（例えば、ポート番号）は、ファイル “application.properties” に定義し、“PropertyUtil.java” を通じて値を取り出す。
-* return は省略不可とする。
+* 起動時の可変値（例えば、ポート番号）は、ファイル “application.properties” に定義し、“PropertyUtil.java” といった共通クラスを通じて値を取り出す。
 * 全体的な書き方（例えば、空白の空け方、“} else {” の書き方）：
     ```
     /**
@@ -55,7 +55,7 @@ Eclipse のプラグイン “Checkstyle” のチェックに合格すること
 
         private int MAX_PASSWORD_LENGTH = 8
 
-        /*
+        /**
          * Check Password
          */
         public static void CheckPassword(String password) throw XxxxException {
@@ -81,6 +81,7 @@ Eclipse のプラグイン “Checkstyle” のチェックに合格すること
                 throw new XxxxException(ex.getMessage());
             }
 
+            # Normal end.
             return;
         }
     }
@@ -94,6 +95,7 @@ Eclipse のプラグイン “Checkstyle” のチェックに合格すること
     コンマ“,”の後ろに空白を空ける。<br>
     for のセミコロン “;” の前には空白を空けず、後ろには空白を空ける。<br>
     文末のセミコロン “;” の前には空白を空けない。<br>
+    文字定数は、引用符「'」とする。（プロジェクト判断とする）<br>
 
 ## 3. Python 
 
@@ -108,6 +110,10 @@ PEP（Python Enhancement Proposal）に準拠することが望ましい。PyCha
 * return は、省略不可とする。
 * 全体的な書き方（例えば、空白の空け方）：
     ```
+    #!/usr/bin/env python3
+    
+    ・・・
+
     # Constant
     MAX_PASSWORD_LENGTH = 8
 
@@ -139,6 +145,7 @@ PEP（Python Enhancement Proposal）に準拠することが望ましい。PyCha
         except Exception as ex:
             raise XxxxException(ex)
 
+        # Normal end.
         return
 
 
@@ -146,18 +153,23 @@ PEP（Python Enhancement Proposal）に準拠することが望ましい。PyCha
     if __name__ == '__main__':
         main()
     ```
+    シェバン（シバン）は、“#!/usr/bin/env python3” とする。<br>
     if、elif、else、match、for、while、match、case、try、except の “:” の前に空白を空けない。<br>
     代入演算子、算術演算子、比較演算子の前後には空白を空ける。<br>
     関数やクラスの引数は、アノテーション “:” を使用して引数型を明確にする。“:” の後方に空白を空ける<br>
     関数やクラスには、アノテーション “->” を使用して戻り型を明確にする。“->” の前後に空白を空ける。<br>
     コンマ “,” の後ろに空白を空ける。<br>
     関数やクラスの前後には、2つの改行を空ける。<br>
+    return は省略不可とする。<br>
 
 ## 4. HTML（HTML テンプレートを含む）
 
 * 段下げは、空白 2文字分とする。
 * タグは、小文字を使用する。
 * 閉じタグを省略する（例えば、“&lt;input ... /&gt;”）場合は、“/&gt;”の前に空白を空ける。
+* HTML 内の文字定数は、二重引用符「"」とする。（プロジェクト判断とする）
+* JavaScript 内の文字定数は、引用符「'」とする。（プロジェクト判断とする）
+<br>
 
 ## 5. SQL
 
@@ -168,5 +180,10 @@ PEP（Python Enhancement Proposal）に準拠することが望ましい。PyCha
 * SELECT 文の選択リストに “*” を使用しない。
 * INSERT 文の挿入列リストを省略しない。
 * 複数表のジョインなどにより SELECT 選択リストや WHERE 条件などが複雑になる場合は、FROM に別表名を指定し、列名は“別表名.列名”とする。
+* SQL インジェクションを防止するために、基本的に“?”（動的パラメーター）を使用すること。例えば、MyBatis において “WHERE USER_NAME = #{userName}” を使用すること（“WHERE USER_NAME = \${userName}” を使用してはならない）。
 
 <div style="text-align: right;">- 以上 -</div>
+
+## 6. TODO
+
+* bash、C 等に対応する。
