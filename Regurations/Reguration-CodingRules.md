@@ -20,7 +20,7 @@
     writeFile() ← キャメルケース
     write_file() ← スネークケース
     ```
-* 関数名やメソッド名は、基本的に “[助動詞 ＋] 動詞 + 名詞” とする。
+* 関数名やメソッド名は、基本的に “[助動詞 ＋] 動詞 + 名詞” とする。例：
     |<center>キャメルケース</center>|<center>スネークケース</center>|<center>復帰値例<center>|<center>補足<center>|
     |:--|:--|:--|:--|
     |isValid|is_valid|Boolean|有効性判定|
@@ -31,7 +31,7 @@
     |putXxxx|put_xxxx|int \| String|xxxxに値を設定|
     |generateXxxx|generate_xxxx|void, XxxxException|xxxxの生成処理|
     |removeXxxx|remove_xxxx|void, XxxxException|xxxxの除去処理|
-
+* ファイルの末尾には空の行を挿入する。
 
 ## 2. Java 
 
@@ -158,7 +158,7 @@ PEP（Python Enhancement Proposal）に準拠することが望ましい。PyCha
     if、elif、else、match、for、while、match、case、try、except の “:” の前に空白を空けない。<br>
     代入演算子、算術演算子、比較演算子の前後には空白を空ける。<br>
     関数やクラスの引数は、アノテーション “:” を使用して引数型を明確にする。“:” の後方に空白を空ける<br>
-    関数やクラスには、アノテーション “->” を使用して戻り型を明確にする。“->” の前後に空白を空ける。<br>
+    関数やクラスは、アノテーション “->” を使用して戻り型を明確にする。“->” の前後に空白を空ける。<br>
     コンマ “,” の後ろに空白を空ける。<br>
     関数やクラスの前後には、2つの改行を空ける。<br>
     return は省略不可とする。<br>
