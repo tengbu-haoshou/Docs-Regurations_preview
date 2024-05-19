@@ -2,12 +2,12 @@
 
 ## 目次
 
-1\. 言語共通<br>
-2\. Java<br>
-3\. Python<br>
-4\. HTML（HTML テンプレートを含む）<br>
-5\. SQL<br>
-6\. TODO
+**1\. 言語共通**<br>
+**2\. Java**<br>
+**3\. Python**<br>
+**4\. HTML（HTML テンプレートを含む）**<br>
+**5\. SQL（プロシジャを除く）**<br>
+**6\. TODO**<br>
 
 ## 1. 言語共通
 
@@ -171,7 +171,7 @@ PEP（Python Enhancement Proposal）に準拠することが望ましい。PyCha
 * JavaScript 内の文字定数は、引用符「'」とする。（プロジェクト判断とする）
 <br>
 
-## 5. SQL
+## 5. SQL（プロシジャを除く）
 
 * 80文字から120文字で、改行を入れるよう工夫する。
 * 段下げは、タブを使用し、空白 4文字分とする。
@@ -182,8 +182,8 @@ PEP（Python Enhancement Proposal）に準拠することが望ましい。PyCha
 * 複数表のジョインなどにより SELECT 選択リストや WHERE 条件などが複雑になる場合は、FROM に別表名を指定し、列名は“別表名.列名”とする。
 * SQL インジェクションを防止するために、基本的に“?”（動的パラメーター）を使用すること。例えば、MyBatis において “WHERE USER_NAME = #{userName}” を使用すること（“WHERE USER_NAME = \${userName}” を使用してはならない）。
 
-<div style="text-align: right;">- 以上 -</div>
-
 ## 6. TODO
 
-* bash、C 等に対応する。
+* bash、JavaScript、Typescript、SQL（プロシジャ）、C、C++ 等に対応する。
+
+<div style="text-align: right;">- 以上 -</div>

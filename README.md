@@ -1,4 +1,4 @@
-# Generic IT Regurations
+# Generic IT Documents of Regurations
 
 ## License
 
