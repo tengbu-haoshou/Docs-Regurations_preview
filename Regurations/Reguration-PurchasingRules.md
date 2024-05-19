@@ -28,9 +28,11 @@
 
 ## 5. 提案依頼書（RFP：Request For Proporsal）、見積り依頼書（RFQ：Request For Quotation）
 
+複数会社に依頼を出す。<br>
 
 ## 6. 提案評価、見積り評価
 
+提案内容や見積り内容を見て、会社を選定する。<brs>
 
 ## 7. 契約書の発行、発注
 

@@ -19,6 +19,18 @@
     writeFile ← キャメルケース
     write_file ← スネークケース
     ```
+* 関数名やメソッド名は、基本的に “[助動詞 ＋] 動詞 + 名詞” とする。
+    |<center>キャメルケース</center>|<center>スネークケース</center>|<center>復帰値例<center>|<center>補足<center>|
+    |:--|:--|:--|:--|
+    |isValid|is_valid|Boolean|有効性判定|
+    |hasXxxx|has_xxxx|Boolean|xxxxを持っているか否か|
+    |canXxxxXxxx|can_xxxx_xxxx|Boolean|xxxxが出来るか否か|
+    |fileExists|file_exists|Boolean|ファイルが存在するか否か|
+    |getXxxx|get_xxxx|int \| String|xxxxの値を取得|
+    |putXxxx|put_xxxx|int \| String|xxxxに値を設定|
+    |generateXxxx|generate_xxxx|void, XxxxException|xxxxの生成処理|
+    |removeXxxx|remove_xxxx|void, XxxxException|xxxxの除去処理|
+
 
 ## 2. Java 
 
@@ -34,7 +46,7 @@ Eclipse のプラグイン “Checkstyle” のチェックに合格すること
 * 起動時の可変値（例えば、ポート番号）は、ファイル “application.properties” に定義し、“PropertyUtil.java” を通じて値を取り出す。
 * return は省略不可とする。
 * for、while、do-while、if、else、switch、try、catch の “{” と “}” は、省略不可とする。
-* 全体的な書き方（例えば、空白の空け方、else の書き方）：
+* 全体的な書き方（例えば、空白の空け方、“} else {” の書き方）：
     ```
     /**
      * Xxxx Utility
@@ -77,6 +89,8 @@ Eclipse のプラグイン “Checkstyle” のチェックに合格すること
     クラスメソッド、for、while、do-while、if、else、switch、catch の “(”の前に空白を空け、“(”の後ろには空白を空けない。また、“)”の前には空白を空けない。<br>
     クラスメソッド、for、while、do-while、if、else、switch、try、catch の “{”の前に空白を空ける。<br>
     代入演算子、算術演算子、比較演算子の前後には空白を空ける。<br>
+    単項算術演算子（“++” 等）は、空白を空けない。<br>
+    コンマ“,”の後ろに空白を空ける<br>
 
 ## 3. Python 
 
@@ -133,6 +147,7 @@ PEP（Python Enhancement Proposal）に準拠することが望ましい。PyCha
     代入演算子、算術演算子、比較演算子の前後には空白を空ける。<br>
     関数やクラスの引数は、アノテーション “: ” を使用して型を明確にする。<br>
     関数やクラスには、アノテーション “ -> ” を使用して型を明確にする。<br>
+    コンマ“,”の後ろに空白を空ける<br>
     関数やクラスの前後には、2つの改行を空ける。<br>
 
 ## 4. HTML（HTML テンプレートを含む）

@@ -1,6 +1,6 @@
 # アプリケーションセキュリティ辞書（内容無し）
 
-“Reguration-SecurityOfWebApplication_AppendixDictionaly.md”には、CC0-1.0 の対象外である。引用元の Copyright に従い、非営利の場合のみ公開できる。<br>
+“Reguration-SecurityOfWebApplication_AppendixDictionaly.md” は、CC0-1.0 の対象外である。引用元の Copyright に従い、非営利の場合のみ公開できる。<br>
 
 ## 目次
 
