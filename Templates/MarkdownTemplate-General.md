@@ -25,14 +25,18 @@
 本文本文本文本文。<br>
 
 1. 手順。
-    ```
+
+    ```txt
     〇〇〇〇
     ```
+
 2. 手順。
+
     |<center>No</center>|<center>商品</center>|<center>価格 [CNY]</center>|<center>数量 [個]</center>|
     |--:|:-:|--:|--:|
     |1|Apple|10,000.00|100|
     |2|Orange|2,000.00|2,000|
+
 3. 手順。
 
 **小見出し**
@@ -52,7 +56,7 @@
 
 **操作手順**
 
-```
+```bat
 C:\Users\xxxx\> D:
 D:\> cd Developments
 D:\Developments> dir
