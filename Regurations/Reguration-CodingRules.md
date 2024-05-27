@@ -15,12 +15,15 @@
 * 改行コードは、UNIX 改行（CR）とする。（プロジェクト判断とする）
 * ハンガリー記法（bFlag、iValue 等）は、使用しない。
 * アッパーキャメルケース、キャメルケース、スネークケースについて：
-    ```
+
+    ```txt
     WriteFile() ← アッパーキャメルケース
     writeFile() ← キャメルケース
     write_file() ← スネークケース
     ```
+
 * 関数名やメソッド名は、基本的に “[助動詞 ＋] 動詞 + 名詞” とする。例：
+
     |<center>キャメルケース</center>|<center>スネークケース</center>|<center>復帰値例<center>|<center>補足<center>|
     |:--|:--|:--|:--|
     |isValid|is_valid|Boolean|有効性判定|
@@ -31,9 +34,10 @@
     |putXxxx|put_xxxx|int \| String|xxxxに値を設定|
     |generateXxxx|generate_xxxx|void, XxxxException|xxxxの生成処理|
     |removeXxxx|remove_xxxx|void, XxxxException|xxxxの除去処理|
+
 * ファイルの末尾には空の行を挿入する。
 
-## 2. Java 
+## 2. Java
 
 Eclipse のプラグイン “Checkstyle” のチェックに合格することが望ましい。<br>
 
@@ -46,7 +50,8 @@ Eclipse のプラグイン “Checkstyle” のチェックに合格すること
 * 共通変数名は、“ConstUtil.java” といった共通クラスで定義する。
 * 起動時の可変値（例えば、ポート番号）は、ファイル “application.properties” に定義し、“PropertyUtil.java” といった共通クラスを通じて値を取り出す。
 * 全体的な書き方（例えば、空白の空け方、“} else {” の書き方）：
-    ```
+
+    ```java
     /**
      * Xxxx Utility
      *   It processes common xxxx.
@@ -86,6 +91,7 @@ Eclipse のプラグイン “Checkstyle” のチェックに合格すること
         }
     }
     ```
+
     for、while、do-while、if、else、switch、try、catch の “{” と “}” は、省略不可とする。<br>
     クラスメソッド、if、else、for、while、do-while、switch、catch の “(”の前に空白を空け、“(”の後ろには空白を空けない。また、“)”の前には空白を空けない。<br>
     クラスメソッド、if、else、switch、for、while、do-while、try、catch の “{”の前に空白を空ける。<br>
@@ -97,10 +103,10 @@ Eclipse のプラグイン “Checkstyle” のチェックに合格すること
     文末のセミコロン “;” の前には空白を空けない。<br>
     文字定数は、引用符「'」とする。（プロジェクト判断とする）<br>
 
-## 3. Python 
+## 3. Python
 
 PEP（Python Enhancement Proposal）に準拠することが望ましい。PyCharm は、PEP 準拠チェックを行ってくれる。<br>
-<https://pep8-ja.readthedocs.io/ja/latest/><br>
+PEP：<https://pep8-ja.readthedocs.io/ja/latest/><br>
 
 * 80文字から120文字で、改行を入れるよう工夫する。
 * 段下げは、空白 4文字を使用する。
@@ -110,9 +116,10 @@ PEP（Python Enhancement Proposal）に準拠することが望ましい。PyCha
 * sum, str 等の Python で使うキーワードを関数名や変数名にしないこと。
 * return は、省略不可とする。
 * 全体的な書き方（例えば、空白の空け方）：
-    ```
+
+    ```python
     #!/usr/bin/env python3
-    
+
     ・・・
 
     # Constant
@@ -154,6 +161,7 @@ PEP（Python Enhancement Proposal）に準拠することが望ましい。PyCha
     if __name__ == '__main__':
         main()
     ```
+
     シェバン（シバン）は、“#!/usr/bin/env python3” とする。<br>
     if、elif、else、match、for、while、match、case、try、except の “:” の前に空白を空けない。<br>
     代入演算子、算術演算子、比較演算子の前後には空白を空ける。<br>
@@ -171,7 +179,6 @@ PEP（Python Enhancement Proposal）に準拠することが望ましい。PyCha
 * 閉じタグを省略する（例えば、“&lt;input ... /&gt;”）場合は、“/&gt;”の前に空白を空ける。
 * HTML 内の文字定数は、二重引用符「"」とする。（プロジェクト判断とする）
 * JavaScript 内の文字定数は、引用符「'」とする。（プロジェクト判断とする）
-<br>
 
 ## 5. SQL（プロシジャを除く）
 
